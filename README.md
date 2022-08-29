@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# React Likes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![like thumb](https://graphiccave.com/wp-content/uploads/2015/06/Facebook-Like-Thumb-Up-Icon-Free-Vector-PNG-Graphic-Cave.png)
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+In this lab, you will create a likes component in React. Your final product should function similarly to
+[this deployed version](https://react-likes.surge.sh/) of the component.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Clone this repo and cd into it.
+- Create a new react app named `react_likes` in this directory.
+- Change into your `react_likes` app and begin your work from there.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Instructions
 
-### `npm test`
+Create a new component called **Likes** in the `src` directory and add functionality to it so that when the render component it records the number of clicks in state and displays the total clicks.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Use the `useState` hook to add state called `totalLikes` to the component to store the current number of clicks on the component.
+- Initialize the `totalLikes` state as `0`.
+- In your JSX, render a `button` element with it's text set to the value of `totalLikes`.
+- Include an `onClick` attribute on the start button which calls a function that increments the value of `totalLikes`.
+- Make a commit with a message that reads "Add MVP functionality"!
 
-### `npm run build`
+## Bonus
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Change the increment button to have a `+` as its text.
+- Add another button that decrements the `totalLikes` and has a `-` as its text.
+- Render the `totalLikes` to the page in a `p` element.
+- Once you have the `totalLikes` displaying on the page, move just the display paragraph into its own component called **LikeTotal** and have the Likes component you built render it (hint: use props to pass the value of `totalLikes` to your new LikeTotal component).
+- Make another commit with a message that reads "Add decrement button".
+- Make it so that the `totalLikes` can never display a value less than `0`.
